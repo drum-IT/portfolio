@@ -82,6 +82,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./assets/css/modern-normalize.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./booking/booking.css" />
     <title>Miles Pratt</title>
     <script src="./assets/js/script.js" defer></script>
   </head>
@@ -92,6 +93,96 @@
       <div class="greeting">
         <h1>MILES PRATT</h1>
         <p>Web Developer</p>
+      </div>
+    </div>
+    <div class="current">
+      <h1 class="section__header">Current Projects</h1>
+      <div class="current__highlight current__highlight--left">
+        <img src="./assets/images/fits.png" alt="" />
+        <div>
+          <h3 class="highlight__name">Sick Fits</h3>
+          <p class="current__highlight__text">
+            In an effort to stay up-to-date with the latest full-stack web
+            development technologies and best-practices, I am currently working
+            through a course to build an online store platform built with React,
+            Apollo Client, GraphQL Yoga, and Prisma GraphQL Database Interface.
+          </p>
+          <p>
+            I chose this course to round out my full-stack web development
+            skills by exposing me to more in-depth javascript testing,
+            permission management, JWT authentication, and credit card
+            integration.
+          </p>
+        </div>
+      </div>
+      <div class="current__highlight current__highlight--right">
+        <div>
+          <h3 class="highlight__name">Vivlia</h3>
+          <p class="current__highlight__text">
+            My parents recently opened a Bed and Breakfast. In addition to
+            building their website, I am also building them a booking management
+            application. This applcation will allow them to manage bookings,
+            communicate with customers, and manage to-do lists related to
+            running the business.
+          </p>
+          <p class="current__highlight__text">
+            This application uses the MERN stack. MongoDB, Express, React, and
+            NodeJS, and will interface via API with a front-end calendar that
+            can be embeded on a website. This is a live demo of the calendar.
+          </p>
+        </div>
+        <!-- <img src="https://via.placeholder.com/330x220.png" alt="" /> -->
+        <div class="calendar__container">
+          <div class="calendar">
+            <div class="calendar__header">
+              <button onclick="changeMonth('back')">
+                <!-- <i class="fas fa-chevron-left"></i> -->
+                <img
+                  class="calendar__arrow calendar__arrow--left"
+                  src="./assets/images/right-chevron.svg"
+                  alt=""
+                />
+              </button>
+              <h3 id="month" class="month"></h3>
+              <button onclick="changeMonth('forward')">
+                <!-- <i class="fas fa-chevron-right"></i> -->
+                <img
+                  class="calendar__arrow"
+                  src="./assets/images/right-chevron.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="calendar__week">
+              <div class="weekday">Su</div>
+              <div class="weekday">Mo</div>
+              <div class="weekday">Tu</div>
+              <div class="weekday">We</div>
+              <div class="weekday">Th</div>
+              <div class="weekday">Fr</div>
+              <div class="weekday">Sa</div>
+            </div>
+            <div id="days" class="calendar__days"></div>
+          </div>
+          <div class="stay__dates">
+            <div class="stay__dates--container">
+              <p id="checkIn" class="stay__date"></p>
+              <p id="stay__date--divider">--</p>
+              <p id="checkOut" class="stay__date"></p>
+            </div>
+            <div id="stay__summary">
+              <p id="stayLength"></p>
+              <p id="stayCost"></p>
+            </div>
+            <input
+              id="guestName"
+              type="text"
+              name="guestName"
+              placeholder="reservation name"
+            />
+            <button id="bookButton">Book</button>
+          </div>
+        </div>
       </div>
     </div>
     <div id="projects" class="projects__container">
@@ -619,5 +710,6 @@
         </a>
       </div>
     </div>
+    <script src="./booking/booking.js"></script>
   </body>
 </html>

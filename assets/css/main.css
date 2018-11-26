@@ -101,6 +101,52 @@ nav a {
   letter-spacing: 0.5rem;
 }
 
+/* CURRENT */
+
+.current {
+  background: var(--white);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 50px 50px;
+  width: 100%;
+}
+
+.current .section__header {
+  margin: 0;
+}
+
+.current__highlight {
+  display: grid;
+  grid-gap: 30px;
+  margin: 50px 0;
+}
+
+.current__highlight > img {
+  border: 2px solid var(--black);
+  width: 400px;
+}
+
+.current__highlight--left {
+  grid-template-columns: 400px 1fr;
+}
+
+.current__highlight--right {
+  grid-template-columns: 1fr 400px;
+}
+
+.current__highlight--right > img {
+  justify-self: end;
+  width: 330px;
+}
+
+.highlight__name {
+  margin: 0;
+}
+
+.current__highlight__text {
+  margin: 20px 0;
+}
+
 /* PROJECTS */
 
 .projects__container {
@@ -229,6 +275,24 @@ a {
 .project:hover .chevron {
   margin-right: 10px;
   opacity: 0.2;
+}
+
+@media (max-width: 775px) {
+  .current__highlight--left {
+    grid-template-columns: 1fr;
+  }
+
+  .current__highlight--right {
+    grid-template-columns: 1fr;
+  }
+
+  .current__highlight > img {
+    justify-self: center;
+  }
+
+  .current__highlight > div {
+    justify-self: center;
+  }
 }
 
 @media (max-width: 700px) {
