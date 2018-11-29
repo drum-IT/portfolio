@@ -90,14 +90,28 @@
   <body>
     <div class="shade"></div>
     <div class="landing">
+      <nav>
+        <a href="#current" class="nav__link">Current Work</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <!--
+          <a href="#about" class="nav__link">About Me</a>
+          <a href="#contact" class="nav__link">Contact</a>
+        -->
+      </nav>
       <div class="greeting">
         <h1>MILES PRATT</h1>
         <p>Web Developer</p>
       </div>
     </div>
-    <div class="current">
+    <div id="current" class="current">
       <h1 class="section__header">Current Projects</h1>
+      <p class="section__summary">
+        I regularly work on a number of projects to practice a variety of web
+        development skills. Here is an assortment of what I'm currently working
+        on.
+      </p>
       <div class="current__highlight current__highlight--left">
+        <h3 class="highlight__name--narrow">Sick Fits</h3>
         <img src="./assets/images/fits.png" alt="" />
         <div>
           <h3 class="highlight__name">Sick Fits</h3>
@@ -116,14 +130,56 @@
         </div>
       </div>
       <div class="current__highlight current__highlight--right">
+        <h3 class="highlight__name--narrow">Landlorder</h3>
+        <div>
+          <h3 class="highlight__name">Landlorder</h3>
+          <p class="current__highlight__text">
+            To solidify my understanding of React and GraphQL, I am building a
+            landlord management application in parallel to the React/GraphQL
+            course described above.
+          </p>
+          <p>
+            This application will allow landlords to list, and manage their
+            properties, communicate with tenants, employees, and contractors,
+            log invoices, and manage calendars and todo lists.
+          </p>
+          <p>
+            Once these features are complete, I plan to add some social features
+            that will allow tenants at the same property to communicate with
+            eachother.
+          </p>
+        </div>
+        <img src="./assets/images/landlorder.png" alt="" />
+      </div>
+      <div class="current__highlight current__highlight--left">
+        <h3 class="highlight__name--narrow">Hummingbird Hill</h3>
+        <img
+          src="https://res.cloudinary.com/drumit/image/upload/c_limit,h_1000,q_auto:best,w_800/portfolio/hbh.png"
+        />
+        <div>
+          <h3 class="highlight__name">Hummingbird Hill</h3>
+          <p class="current__highlight__text">
+            My parents recently opened a bed and breakfast, and are hoping to
+            move away from using third party sites like Airbnb to book guests. I
+            am currently building them a simple website.
+          </p>
+          <p>
+            Once the design is finalized, I plan to build the final version in
+            React to create a snappy performance for prospetive guests, and will
+            eventually integrate online booking via a separate web application I
+            am also building.
+          </p>
+        </div>
+      </div>
+      <div class="current__highlight current__highlight--right">
+        <h3 class="highlight__name--narrow">Vivlia</h3>
         <div>
           <h3 class="highlight__name">Vivlia</h3>
           <p class="current__highlight__text">
-            My parents recently opened a Bed and Breakfast. In addition to
-            building their website, I am also building them a booking management
-            application. This applcation will allow them to manage bookings,
-            communicate with customers, and manage to-do lists related to
-            running the business.
+            In addition to building their website, I am also building a booking
+            management application for my parent's bed and breakfast. This
+            applcation will allow them to manage bookings, communicate with
+            customers, and manage to-do lists related to running the business.
           </p>
           <p class="current__highlight__text">
             This application uses the MERN stack. MongoDB, Express, React, and
@@ -131,7 +187,6 @@
             can be embeded on a website. This is a live demo of the calendar.
           </p>
         </div>
-        <!-- <img src="https://via.placeholder.com/330x220.png" alt="" /> -->
         <div class="calendar__container">
           <div class="calendar">
             <div class="calendar__header">
@@ -171,21 +226,29 @@
               <p id="checkOut" class="stay__date"></p>
             </div>
             <div id="stay__summary">
-              <p id="stayLength"></p>
+              <p id="stayLength">&nbsp;</p>
               <p id="stayCost"></p>
             </div>
-            <input
-              id="guestName"
-              type="text"
-              name="guestName"
-              placeholder="reservation name"
-            />
-            <button id="bookButton">Book</button>
+            <!--
+              <input
+                id="guestName"
+                type="text"
+                name="guestName"
+                placeholder="reservation name"
+              />
+              <button id="bookButton">Book</button>
+            -->
           </div>
         </div>
       </div>
     </div>
     <div id="projects" class="projects__container">
+      <h1 class="section__header">Projects</h1>
+      <p class="project__summary">
+        Below is a collection of the web development projects I have built, or
+        am working on. Most of these projects are very simple, and were built to
+        learn, and pratice a specific set of skills.
+      </p>
       <h1 class="section__header">Front-End Projects</h1>
 
       <div class="projects">

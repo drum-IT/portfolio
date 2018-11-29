@@ -4,6 +4,7 @@
   --offwhite: #f2f2f2;
   --blue: #b3d9db;
   --lightBlue: #cedadb;
+  --calWidth: 35px;
 }
 
 html,
@@ -16,11 +17,10 @@ body {
 
 .calendar__arrow {
   opacity: 0.6;
-  height: 1rem;
+  height: 0.75rem;
 }
 
 .calendar__arrow--left {
-  height: 1rem;
   transform: rotateY(180deg);
 }
 
@@ -30,7 +30,8 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  width: 330px;
+  width: 100%;
+  max-width: 100%;
   justify-self: right;
 }
 
@@ -43,7 +44,7 @@ body {
     "week week week week week week week"
     "days days days days days days days";
   grid-template-columns: repeat(7, 1fr);
-  padding: 20px;
+  padding: 10px;
 }
 
 .calendar__header {
@@ -53,6 +54,10 @@ body {
   grid-area: head;
   height: 35px;
   justify-content: space-between;
+}
+
+.calendar__header h3 {
+  font-size: 1rem;
 }
 
 .calendar__header button {
@@ -77,7 +82,7 @@ body {
   display: grid;
   grid-area: week;
   grid-gap: 1px;
-  grid-template-columns: repeat(7, 40px);
+  grid-template-columns: repeat(7, var(--calWidth));
   justify-items: center;
 }
 
@@ -92,7 +97,7 @@ body {
   display: grid;
   grid-gap: 1px;
   grid-area: days;
-  grid-template-columns: repeat(7, 40px);
+  grid-template-columns: repeat(7, var(--calWidth));
 }
 
 .day {
@@ -102,7 +107,7 @@ body {
   cursor: pointer;
   display: flex;
   font-size: 0.9rem;
-  height: 40px;
+  height: var(--calWidth);
   justify-content: center;
   transition: all 250ms;
 }
@@ -131,6 +136,7 @@ body {
 }
 
 .stay__dates {
+  font-size: 0.8rem;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -164,6 +170,7 @@ body {
   width: 100%;
   transition: all 200ms;
   opacity: 0;
+  visibility: hidden;
 }
 
 #bookButton:active {
@@ -183,6 +190,7 @@ body {
   transition: all 200ms;
   margin-bottom: 15px;
   opacity: 0;
+  visibility: hidden;
 }
 
 #guestName:focus {

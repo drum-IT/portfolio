@@ -6,8 +6,8 @@ const checkOut = document.getElementById("checkOut");
 const checkOutInput = document.getElementById("checkOutInput");
 const stayLength = document.getElementById("stayLength");
 const stayLengthInput = document.getElementById("stayLengthInput");
-const bookButton = document.getElementById("bookButton");
-const guestName = document.getElementById("guestName");
+// const bookButton = document.getElementById("bookButton");
+// const guestName = document.getElementById("guestName");
 const divider = document.getElementById("stay__date--divider");
 const stayCost = document.getElementById("stayCost");
 // const bookingEndPoint = "http://localhost:5000/bookings";
@@ -85,11 +85,11 @@ function renderCalendar(date) {
 function clearCalendar(date) {
   checkIn.innerHTML = "";
   checkOut.innerHTML = "";
-  stayLength.innerHTML = "";
-  stayCost.innerHTML = "";
+  stayLength.innerHTML = "&nbsp;";
+  stayCost.innerHTML = "&nbsp;";
   divider.style.opacity = 0;
-  bookButton.style.opacity = 0;
-  guestName.style.opacity = 0;
+  // bookButton.style.opacity = 0;
+  // guestName.style.opacity = 0;
   selectedDays.pop();
   selectedDays.pop();
   dayElements.forEach(day => {
@@ -204,8 +204,8 @@ function selectDay(e) {
       // "<strong>Check In:</strong> " + checkInDate.toDateString();
       checkInDate.toDateString();
     divider.style.opacity = 0;
-    bookButton.style.opacity = 0;
-    guestName.style.opacity = 0;
+    // bookButton.style.opacity = 0;
+    // guestName.style.opacity = 0;
   } else if (selectedDays.length === 1) {
     selectedDays.push(selectedDay);
     if (fillMids()) {
@@ -219,9 +219,9 @@ function selectDay(e) {
         // "<strong>Check Out:</strong> " + checkOutDate.toDateString();
         checkOutDate.toDateString();
       divider.style.opacity = 1;
-      bookButton.style.opacity = 1;
-      guestName.style.opacity = 1;
-      bookButton.addEventListener("click", book);
+      // bookButton.style.opacity = 1;
+      // guestName.style.opacity = 1;
+      // bookButton.addEventListener("click", book);
     }
   } else {
     e.currentTarget.classList.toggle("selected__day");
@@ -273,19 +273,19 @@ async function blockDays(bookings) {
 }
 
 async function book(checkIn, checkOut, name, lengthOfStay) {
-  if (!guestName.value) {
-    guestName.classList.toggle("error__input");
-    setTimeout(() => {
-      guestName.classList.toggle("error__input");
-    }, 200);
-    setTimeout(() => {
-      guestName.classList.toggle("error__input");
-    }, 400);
-    return setTimeout(() => {
-      guestName.classList.toggle("error__input");
-    }, 600);
-  }
-  booking.guestName = guestName.value;
+  // if (!guestName.value) {
+  //   guestName.classList.toggle("error__input");
+  //   setTimeout(() => {
+  //     guestName.classList.toggle("error__input");
+  //   }, 200);
+  //   setTimeout(() => {
+  //     guestName.classList.toggle("error__input");
+  //   }, 400);
+  //   return setTimeout(() => {
+  //     guestName.classList.toggle("error__input");
+  //   }, 600);
+  // }
+  // booking.guestName = guestName.value;
   booking.room = roomId;
   console.log("booking!", booking);
   if (
